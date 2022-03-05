@@ -26,10 +26,10 @@ public class LoginPage extends BasicPage{
 	}
 	public void login(String email, String password) {
 		getEmailInput().clear();
-		getEmailInput().sendKeys(email);
 		getPasswordInput().clear();
+		getEmailInput().sendKeys(email);
 		getPasswordInput().sendKeys(password);
-		getSubmitButton().click();
+		js.executeScript("arguments[0].click();", getSubmitButton());
 		
 	}
 
