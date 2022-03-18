@@ -54,9 +54,8 @@ public class ProfilePage extends BasicPage{
 	}
 	public void uploadProfileImage (String pathToTheImage) {
 		js.executeScript("arguments[0].click();", getUploadImageButton());
-		File profileImg = new File (pathToTheImage);
 		WebElement profilePhotoUpload = driver.findElement(By.xpath("//input[@type='file']"));
-		profilePhotoUpload.sendKeys(profileImg.getAbsolutePath());
+		profilePhotoUpload.sendKeys(pathToTheImage);
 	}
 	public void removeProfileImage () {
 		js.executeScript("arguments[0].click();", getRemoveImageButton());

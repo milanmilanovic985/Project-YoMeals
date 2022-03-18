@@ -85,7 +85,7 @@ public abstract class BasicTest {
 			FileHandler.copy(source, new File("./screenshots/" + result.getName() + " - " + screenshotDate + ".png"));
 		}
 		Thread.sleep(3000);
-		driver.quit();
+//		driver.quit();
 		
 	}
 	
